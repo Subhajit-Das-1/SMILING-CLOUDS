@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Sky */
+  body, html {
+    height: 100%;
+    background: linear-gradient(to bottom, #87ceeb, #e0f7fa);
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  .sky {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  /* Cloud Style */
+  .cloud {
+    position: absolute;
+    width: 150px;
+    height: 90px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+      40px 0 white,
+      20px -20px white,
+      60px -10px white;
+    animation: floatCloud linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Face container */
+  .face {
+    position: relative;
+    width: 60px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Eyes container */
+  .eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  /* Eye style with blinking */
+  .eye {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    animation: blink 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 90%, 100% {
+      height: 10px;
+    }
+    93%, 97% {
+      height: 2px;
+    }
+  }
+  
+  /* Smile animation */
+  .smile {
+    width: 30px;
+    height: 15px;
+    border: 2px solid black;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    animation: smiley 2s ease-in-out infinite;
+  }
+  
+  @keyframes smiley {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(1.3);
+    }
+  }
+  
+  /* Cloud positions and animation duration */
+  .cloud1 {
+    top: 20%;
+    left: -200px;
+    animation-duration: 25s;
+  }
+  
+  .cloud2 {
+    top: 50%;
+    left: -250px;
+    animation-duration: 35s;
+    animation-delay: 5s;
+  }
+  
+  .cloud3 {
+    top: 80%;
+    left: -300px;
+    animation-duration: 30s;
+    animation-delay: 10s;
+  }
+  
+  /* Cloud movement */
+  @keyframes floatCloud {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(120vw);
+    }
+  }
+  
